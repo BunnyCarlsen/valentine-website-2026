@@ -51,7 +51,7 @@ const CONFIG = {
     celebration: {
         title: "I USED TO PRAY FOR TIMES LIKE THESE",
         message: "let's freaking go dude",
-        emojis: "🎁💖🤗💝💋❤️💕"  // These will bounce around
+        emojis: " "  // These will bounce around
     },
 
     // Color scheme for the website
