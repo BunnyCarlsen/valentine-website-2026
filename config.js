@@ -50,7 +50,7 @@ const CONFIG = {
     // Messages that appear after they say "Yes!"
     celebration: {
         title: "I USED TO PRAY FOR TIMES LIKE THESE",
-        message: "let's freaking go dude",
+        message: "LETS FREAKING GO DUDE",
         emojis: " "  // These will bounce around
     },
 
