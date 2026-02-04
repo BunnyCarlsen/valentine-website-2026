@@ -33,7 +33,7 @@ const CONFIG = {
             nextBtn: "Next ❤️"                                         // Text for the next button
         },
         third: {
-            text: "please speed I need this", // The big question!
+            text: "will you be my valentine? (please speed i need this)", // The big question!
             yesBtn: "ofc twin",                                             // Text for "Yes" button
             noBtn: "no >:("                                                 // Text for "No" button
         }
