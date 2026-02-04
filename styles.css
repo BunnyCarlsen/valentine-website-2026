@@ -133,32 +133,40 @@ body {
 .slider {
     width: 100%;
     height: 25px;
-    background: linear-gradient(to right, #ff6b6b, #ff8787, #ffb8b8);
+
     -webkit-appearance: none;
     appearance: none;
     outline: none;
+
     position: relative;
+    box-sizing: border-box;
+
+    /* ⛔ hard stop for thumb */
+    padding-left: 18px;
+    padding-right: 18px;
+
+    background: linear-gradient(to right, #ff6b6b, #ff8787, #ffb8b8);
+    background-clip: content-box;
+
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(255, 107, 107, 0.2);
-    transition: all 0.3s ease;
-
-    margin-top: 40px;
 }
-
 
 .slider:hover {
     box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
 }
 
 /* Ensure track is visible */
-.slider::-webkit-slider-runnable-track,
-.slider::-moz-range-track {
-    width: 100%;
+.slider::-webkit-slider-runnable-track {
     height: 25px;
-    background: linear-gradient(to right, #ff6b6b, #ff8787, #ffb8b8);
     border-radius: 15px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
 }
+
+.slider::-moz-range-track {
+    height: 25px;
+    border-radius: 15px;
+}
+
 
 /* Ensure thumb is properly styled */
 .slider::-webkit-slider-thumb {
