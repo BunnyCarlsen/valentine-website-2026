@@ -200,21 +200,18 @@ body {
 }
 
 #extraLove {
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-
     color: #ff6b6b;
     font-weight: bold;
     animation: bounce 0.5s infinite alternate;
-
+    display: block;
     padding: 5px 10px;
     border-radius: 10px;
     background: rgba(255, 107, 107, 0.1);
     text-shadow: 0 2px 4px rgba(255, 71, 87, 0.2);
-    white-space: nowrap;
+    transition: all 0.3s ease;
+    margin-top: 5px;
 }
+
 
 
 
