@@ -113,9 +113,8 @@ body {
     position: relative;
     width: 100%;
     margin: 20px auto;
-    padding: 10px 18px;
+    padding: 30px 18px 20px;
     overflow: hidden;
-    min-height: 180px; /* ⭐ optional, prevents ANY jumping */
 }
 
 
@@ -201,19 +200,22 @@ body {
 }
 
 #extraLove {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+
     color: #ff6b6b;
     font-weight: bold;
     animation: bounce 0.5s infinite alternate;
-    display: inline-block;       
-    transform-origin: center;
-    will-change: transform;
+
     padding: 5px 10px;
     border-radius: 10px;
     background: rgba(255, 107, 107, 0.1);
     text-shadow: 0 2px 4px rgba(255, 71, 87, 0.2);
-    transition: all 0.3s ease;
-    margin-top: 5px;
+    white-space: nowrap;
 }
+
 
 
 #extraLove.super-love {
