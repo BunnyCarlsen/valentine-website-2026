@@ -218,25 +218,21 @@ function setupMusicPlayer() {
     bgMusic.volume = config.music.volume || 0.5;
     bgMusic.load();
 
-    // Try autoplay if enabled
-    if (config.music.autoplay) {
-        const playPromise = bgMusic.play();
-        if (playPromise !== undefined) {
-            playPromise.catch(error => {
-                console.log("Autoplay prevented by browser");
-                musicToggle.textContent = config.music.startText;
-            });
-        }
-    }
+    // Set initial button text
+    musicToggle.textContent = config.music.startText;
 
-    // Toggle music on button click
+    // Play/pause only on button click (user interaction)
     musicToggle.addEventListener('click', () => {
         if (bgMusic.paused) {
-            bgMusic.play();
-            musicToggle.textContent = config.music.stopText;
+            bgMusic.play().then(() => {
+                musicToggle.textContent = config.music.stopText;
+            }).catch(error => {
+                console.log("Playback failed:", error);
+            });
         } else {
             bgMusic.pause();
             musicToggle.textContent = config.music.startText;
         }
     });
-} 
+}
+
